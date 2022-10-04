@@ -26,7 +26,7 @@ class product(models.Model):
         old_price=self.current_price
         if self.current_price:
             if price != old_price:
-                diff = price - old_price
+                diff = float(price - old_price)
                 self.difference_price=round(diff,2)
                 self.old_product_price=old_price
                
